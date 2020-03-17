@@ -37,7 +37,7 @@ define Device/tplink_tl-mr3220-v1
   DEVICE_TITLE := TP-Link TL-MR3220 v1
   TPLINK_HWID := 0x32200001
   DEVICE_PACKAGES := kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
-  SUPPORTED_DEVICES += tl-mr3220-v1
+  SUPPORTED_DEVICES += tl-mr3220
 endef
 TARGET_DEVICES += tplink_tl-mr3220-v1
 
@@ -47,7 +47,7 @@ define Device/tplink_tl-mr3420-v1
   DEVICE_TITLE := TP-Link TL-MR3420 v1
   TPLINK_HWID := 0x34200001
   DEVICE_PACKAGES := kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
-  SUPPORTED_DEVICES += tl-mr3420-v1
+  SUPPORTED_DEVICES += tl-mr3420
 endef
 TARGET_DEVICES += tplink_tl-mr3420-v1
 
@@ -90,9 +90,16 @@ define Device/tplink_tl-wr740n-v4
   ATH_SOC := ar9331
   DEVICE_TITLE := TP-Link TL-WR740N v4
   TPLINK_HWID := 0x07400004
-  SUPPORTED_DEVICES += tl-wr740n-v4
 endef
 TARGET_DEVICES += tplink_tl-wr740n-v4
+
+define Device/tplink_tl-wr740n-v5
+  $(Device/tplink-4mlzma)
+  ATH_SOC := ar9331
+  DEVICE_TITLE := TP-Link TL-WR740N v5
+  TPLINK_HWID := 0x07400005
+endef
+TARGET_DEVICES += tplink_tl-wr740n-v5
 
 define Device/tplink_tl-wr741-v1
   $(Device/tplink-4m)
@@ -107,7 +114,7 @@ define Device/tplink_tl-wr741nd-v4
   ATH_SOC := ar9331
   DEVICE_TITLE := TP-Link TL-WR741N/ND v4
   TPLINK_HWID := 0x07410004
-  SUPPORTED_DEVICES += tl-wr741n-v4
+  SUPPORTED_DEVICES += tl-wr741nd-v4
 endef
 TARGET_DEVICES += tplink_tl-wr741nd-v4
 
@@ -132,7 +139,7 @@ define Device/tplink_tl-wr841-v7
   ATH_SOC := ar7241
   DEVICE_TITLE := TP-Link TL-WR841N/ND v7
   TPLINK_HWID := 0x08410007
-  SUPPORTED_DEVICES += tl-wr841-v7
+  SUPPORTED_DEVICES += tl-wr841n-v7
 endef
 TARGET_DEVICES += tplink_tl-wr841-v7
 
